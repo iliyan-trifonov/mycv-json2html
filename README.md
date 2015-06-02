@@ -2,9 +2,13 @@
 
 [See it in action here](https://iliyan-trifonov.com "Iliyan Trifonov's CV").
 
+My CV: create your online CV with Angular and Twitter Bootstrap. Configure it only with one JSON file.
+
 A SPApplication containing only static resources: HTML, CSS and JavaScript.
+
 It needs the config.json file to be populated with your CV data and everything else will be done automatically creating 
 a beautiful HTML5 responsive web page(s) showing your own CV.
+
 Sections in the CV: Personal information, Skills, Languages, Work experience, Education and training 
 and Personal projects.
 
