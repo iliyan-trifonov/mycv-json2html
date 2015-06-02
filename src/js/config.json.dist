@@ -1,0 +1,79 @@
+{
+  "personal_information": {
+    "name": "Iliyan Trifonov",
+    "image": "https://.....jpg",
+    "address": "My address",
+    "phone": "+11 111 111 111",
+    "email": "me@host.com",
+    "homepage": "https://iliyan-trifonov.com",
+    "otherurl": "http://blog.iliyan-trifonov.com",
+    "skype": "myskypename",
+    "twitter": "iliyan_trifonov",
+    "github": "iliyan-trifonov",
+    "sex": "Male",
+    "birthdate": "day/month/year",
+    "nationality": "Bulgarian"
+  },
+  "skills": [
+    "JavaScript",
+    "Node.js",
+    "Angular.js",
+    //...
+  ],
+  "languages_spoken": [
+    {
+      "name": "English",
+      "level": "Very good"
+    },
+    {
+      "name": "Bulgarian",
+      "level": "Native"
+    },
+    //...
+  ],
+  "work_experience": [
+    {
+      "date_start": "January 2015",
+      "date_end": "December 2016",
+      "company_name": "My Dream Company",
+      "position": "Senior Web Developer",
+      "about": "Scrum master, mentor for junior and medior developers, conference speaker"
+    },
+    {
+      "date_start": "2014",
+      "date_end": "2015",
+      "company_name": "My old company",
+      "position": "Web Developer",
+      "about": "Work hard, play hard"
+    },
+    //...
+  ],
+  "education_and_training": [
+    {
+      "date_start": "October 1995",
+      "date_end": "September 2000",
+      "qualification": "Bachelor's degree of Computer Science",
+      "organisation": "My cool university",
+      "subjects": "Maths, C++, Java, PHP, JavaScript"
+    },
+    //...
+  ],
+  "projects": [
+    {
+      "name": "My great site",
+      "thumb": "images/mygreatsite.png",
+      "title": "The Giver",
+      "sourceUrl": {
+        "name": "https://github.com/iliyan-trifonov/mygreatsite", //or change the url here with any string like: "Click here"
+        "url": "https://github.com/iliyan-trifonov/mygreatsite"
+      },
+      "demoUrl": {
+        "name": "https://iliyan-trifonov.com/",
+        "url": "https://iliyan-trifonov.com/"
+      },
+      "tech_used": "JavaScript, Angular.js, Twitter Bootstrap",
+      "about": "It grants wishes"
+    },
+    //...
+  ]
+}

@@ -1,0 +1,15 @@
+<div class="row" ng-if="sk.skills">
+    <div class="col-md-4 text-right">
+        <h3 class="text-uppercase section-title" style="margin-top: 0;">
+            <i class="glyphicon glyphicon-plus"></i>
+            Skills
+        </h3>
+    </div>
+    <div class="col-md-8 skills">
+        <div ng-repeat="skill in sk.skills">
+            <i class="glyphicon glyphicon-ok"></i> {{skill}}
+        </div>
+    </div>
+    <div class="row">&nbsp;</div>
+    <div class="row">&nbsp;</div>
+</div>

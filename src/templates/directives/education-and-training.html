@@ -1,0 +1,19 @@
+<div class="row" ng-if="et.data.length > 0">
+    <div class="col-md-4 text-right">
+        <h3 class="text-uppercase section-title">
+            <i class="glyphicon glyphicon-education"></i>
+            Education and Training
+        </h3>
+    </div>
+</div>
+
+<div class="row" ng-repeat="edu in et.data">
+    <div class="col-md-4 text-right">
+        <h3>{{edu.date_start}} - {{edu.date_end}}</h3>
+    </div>
+    <div class="col-md-8">
+        <h3>{{edu.qualification}}</h3>
+        <h4>{{edu.organisation}}</h4>
+        <div>{{edu.subjects}}</div>
+    </div>
+</div>
