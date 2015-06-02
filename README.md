@@ -65,16 +65,16 @@ Here's a sample JSON configuration to be put in src/js/config.json:
       "personal_information": {
         "name": "Iliyan Trifonov",
         "image": "https://.....jpg",
-        "address": "My address",
-        "phone": "+11 111 111 111",
-        "email": "me@host.com",
+        "address": "My address", // or "address": null
+        "phone": "+11 111 111 111",  // or "phone": null
+        "email": "me@host.com", // or "email": null
         "homepage": "https://iliyan-trifonov.com",
         "otherurl": "http://blog.iliyan-trifonov.com",
-        "skype": "myskypename",
+        "skype": "myskypename", // or "skype": null
         "twitter": "iliyan_trifonov",
         "github": "iliyan-trifonov",
         "sex": "Male",
-        "birthdate": "day/month/year",
+        "birthdate": "day/month/year", // or "birthdate": null
         "nationality": "Bulgarian"
       },
       "skills": [
