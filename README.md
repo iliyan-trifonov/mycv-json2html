@@ -2,34 +2,41 @@
 
 [See it in action here](https://iliyan-trifonov.com "Iliyan Trifonov's CV").
 
-My CV: create your online CV with Angular and Twitter Bootstrap. Configure it only with one JSON file.
+My CV: create your online CV with [Angular](https://angularjs.org/ "Angular.js") 
+and [Twitter Bootstrap](http://getbootstrap.com/ "Twitter Bootstrap"). Configure it only with 
+one [JSON](http://json.org/ "JSON") file.
 
-A SPApplication containing only static resources: HTML, CSS and JavaScript.
+A [SPApplication](http://en.wikipedia.org/wiki/Single-page_application "SPA") containing only static resources: 
+[HTML](http://en.wikipedia.org/wiki/HTML "HTML"), [CSS](http://en.wikipedia.org/wiki/Cascading_Style_Sheets "CSS") 
+and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript "JS").
 
-It needs the config.json file to be populated with your CV data and everything else will be done automatically creating 
-a beautiful HTML5 responsive web page(s) showing your own CV.
+It needs the [config.json](src/js/config.json.dist) file to be populated with your CV data and everything else will be 
+done automatically creating a beautiful [HTML5](http://en.wikipedia.org/wiki/HTML5 "HTML5") 
+[responsive](http://en.wikipedia.org/wiki/Responsive_web_design "Responsive web design") web page(s) showing your own CV.
 
 Sections in the CV: Personal information, Skills, Languages, Work experience, Education and training 
 and Personal projects.
 
 ## Install
 
-Bower is used to install Angular and its additional modules needed by the application.
+[Bower](http://bower.io/ "Bower") is used to install Angular and its additional modules needed by the application.
 Go to the project's directory and run:
 
     bower install
 
-Copy src/js/config.json.dist to src/js/config.json and edit it with your data.
+Copy [src/js/config.json.dist](src/js/config.json.dist "config.json.dist") to src/js/config.json and edit it with 
+your data.
 
 ## Run
 
-The application needs a simple web server to serve its static files. I use Nginx in production for this job.
+The application needs a simple web server to serve its static files. I use [Nginx](http://nginx.org/en/docs/ "Nginx") 
+in production for this job.
 Here's an example Nginx configuration:
 
     server {
             listen 80;
             server_name www.iliyan-trifonov.com iliyan-trifonov.com;
-            root /var/www/mycv;
+            root /var/www/mycv/src;
     
             access_log /var/log/mycv.access.log;
             error_log /var/log/mycv.error.log;
@@ -147,8 +154,7 @@ to pdf for sending by email.
 
 ## How it works
 
-The application is a Single Page Application. 
-Angular 1.4 is used and it completely provides the modern ControllerAs functionality such as `controllerAs: ''` 
+SPA. Angular 1.4 is used and it completely provides the modern ControllerAs functionality such as `controllerAs: ''` 
 in the router and `bindToController: {...}` in the directives.
 
 A service loads the configuration from the JSON file and uses caching.
@@ -156,7 +162,7 @@ A service loads the configuration from the JSON file and uses caching.
 The router makes sure the configuration is loaded before the pages are parsed by using the `resolve` param with the 
 service.
 
-Additional app configuration that will be very rarely changed is in app.js in the form of:
+Additional app configuration that will be very rarely changed is in [app.js](src/js/app.js "app.js") in the form of:
 
     .value('configFile', 'js/config.json')
     .value('privatePropMessage', 'To be disclosed in person')
