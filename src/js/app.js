@@ -19,7 +19,9 @@
                 controller: 'MainCtrl',
                 controllerAs: 'mc',
                 resolve: {
-                    config: 'getConfig'
+                    config: ['getConfig', function (getConfig) {
+                        return getConfig();
+                    }]
                 }
             })
             .when('/projects', {
@@ -27,7 +29,9 @@
                 controller: 'ProjectsCtrl',
                 controllerAs: 'pp',
                 resolve: {
-                    config: 'getConfig'
+                    config: ['getConfig', function (getConfig) {
+                        return getConfig();
+                    }]
                 }
             })
             .otherwise({
@@ -35,6 +39,12 @@
             });
         }
     ])
+
+    .run(['$rootScope', 'getConfig', function ($rootScope, getConfig) {
+        getConfig().then(function (config) {
+            $rootScope.cvTitle = config.data.cvTitle;
+        });
+    }])
 
     ;
 })(angular);

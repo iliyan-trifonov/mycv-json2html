@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="MyCV">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
@@ -8,7 +8,7 @@
         <meta name="description" content="CV App built with AngularJS, uses JSON configuration">
         <meta name="author" content="Iliyan Trifonov">
         <!--<link rel="icon" href="/favicon.ico">-->
-        <title>Iliyan Trifonov's CV</title>
+        <title>{{cvTitle}}</title>
 
         <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
@@ -19,7 +19,7 @@
         <![endif]-->
     </head>
 
-    <body ng-app="MyCV">
+    <body>
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
