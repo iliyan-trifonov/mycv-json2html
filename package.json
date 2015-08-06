@@ -1,0 +1,32 @@
+{
+  "name": "mycv-json2html",
+  "version": "1.0.0",
+  "description": "My CV: create your online CV with Angular and Twitter Bootstrap. Configure it only with one JSON file.",
+  "private": true,
+  "main": "src/index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iliyan-trifonov/native-blog.git"
+  },
+  "author": "Iliyan Trifonov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iliyan-trifonov/native-blog/issues"
+  },
+  "homepage": "https://github.com/iliyan-trifonov/native-blog#readme"
+}
