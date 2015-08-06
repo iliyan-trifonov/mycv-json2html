@@ -19,13 +19,26 @@ and Personal projects.
 
 ## Install
 
-[Bower](http://bower.io/ "Bower") is used to install Angular and its additional modules needed by the application.
+Make sure you have NodeJS/npm installed. Also Bower is used to install the front-end packages anf Gulp for building the
+final CSS and JS bundles.
+
+Install [Bower](http://bower.io/ "Bower") and [Gulp](http://gulpjs.com/):
+
+    npm install -g bower gulp
+
+Now install the local npm and Bower packages(Angular+plugins, Gulp build tools).
 Go to the project's directory and run:
 
-    bower install
+    npm install
+    
+The command above will run `bower install` automatically.
+    
+Now you're ready to run the build:
 
-Copy [src/js/config.json.dist](src/js/config.json.dist "config.json.dist") to src/js/config.json and edit it with 
-your data.
+    gulp build
+
+Finally copy [src/js/config.json.dist](src/js/config.json.dist "config.json.dist") to src/js/config.json and edit it 
+with your data.
 
 ## Run
 
@@ -48,6 +61,7 @@ Here's an example Nginx configuration:
     
             location / {
                     index index.html;
+                    try_files $uri /index.html;
             }
     
             location ~ /\.ht {
@@ -61,7 +75,7 @@ You can also install a local static web server quickly with npm:
     
 And run it with:
 
-    http-server src/
+    http-server src/ -p 8080
 
 
 ## Configuration
@@ -69,6 +83,8 @@ And run it with:
 Here's a sample JSON configuration to be put in src/js/config.json:
 
     {
+      "cvTitle": "Iliyan Trifonov's CV",
+      "cvDescription": "CV App built with AngularJS, uses JSON configuration",
       "personal_information": {
         "name": "Iliyan Trifonov",
         "image": "https://.....jpg",
@@ -155,7 +171,9 @@ to pdf for sending by email.
 ## How it works
 
 SPA. Angular 1.4 is used and it completely provides the modern ControllerAs functionality such as `controllerAs: ''` 
-in the router and `bindToController: {...}` in the directives.
+in the router and `bindToController: {...}` in the directives. I've also activated the Angular's HTML5 history mode 
+which gives us better urls without the hash symbol: with the Nginx configuration above(`try_files`) such urls work 
+directly and can be refreshed/loaded without the need to load the home page first.
 
 A service loads the configuration from the JSON file and uses caching.
 
@@ -166,8 +184,6 @@ Additional app configuration that will be very rarely changed is in [app.js](src
 
     .value('configFile', 'js/config.json')
     .value('privatePropMessage', 'To be disclosed in person')
-
-All paths are set as relative, not absolute, for easy refactoring of the app's structure.
 
 The JSON configuration is relaxed to allow free strings in most of the places so you can be creative by using just the 
 config file.
