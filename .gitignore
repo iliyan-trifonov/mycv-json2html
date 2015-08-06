@@ -85,3 +85,8 @@ src/js/config.json
 
 #only for private stuff
 .coveralls.yml
+
+src/images/*.png
+src/images/*.jpg
+src/images/*.gif
+src/dist/
