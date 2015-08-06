@@ -1,5 +1,6 @@
 {
   "cvTitle": "Iliyan Trifonov's CV",
+  "cvDescription": "CV App built with AngularJS, uses JSON configuration",
   "personal_information": {
     "name": "Iliyan Trifonov",
     "image": "https://.....jpg",
