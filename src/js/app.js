@@ -5,15 +5,16 @@
         'MyCV.controllers',
         'MyCV.services',
         'MyCV.directives',
-        'ngRoute'
+        'ngRoute',
+        'ngAnimate'
     ])
 
     .value('configFile', 'js/config.json')
     .value('privatePropMessage', 'To be disclosed in person')
 
     .config([
-        '$routeProvider',
-        function ($routeProvider) {
+        '$routeProvider', '$locationProvider',
+        function ($routeProvider, $locationProvider) {
             $routeProvider.when('/', {
                 templateUrl: 'templates/partials/main.html',
                 controller: 'MainCtrl',
@@ -37,12 +38,15 @@
             .otherwise({
                 redirectTo: '/'
             });
+
+            $locationProvider.html5Mode(true);
         }
     ])
 
     .run(['$rootScope', 'getConfig', function ($rootScope, getConfig) {
         getConfig().then(function (config) {
             $rootScope.cvTitle = config.data.cvTitle;
+            $rootScope.cvDescription = config.data.cvDescription;
         });
     }])
 
