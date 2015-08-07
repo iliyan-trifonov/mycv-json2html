@@ -2,7 +2,7 @@
     <div class="col-md-4 text-right">
         <h3>{{proj.data.name}}</h3>
         <div>
-            <a ng-href="{{proj.data.demoUrl.url}}" target="_blank">
+            <a ng-href="{{proj.data.demoUrl.url || proj.data.sourceUrl.url}}" target="_blank">
                 <img ng-src="{{proj.data.thumb}}" />
             </a>
         </div>
