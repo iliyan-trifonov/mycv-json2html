@@ -103,9 +103,9 @@
                     data: '='
                 },
                 controller: function () {
-                    this.showDemoUrl = this.data.demoUrl &&
-                        this.data.demoUrl.url &&
-                        this.data.demoUrl.name;
+                    this.showDemoUrl = (!!this.data.demoUrl &&
+                        !!this.data.demoUrl.url &&
+                        !!this.data.demoUrl.name);
                 }
             };
         }
