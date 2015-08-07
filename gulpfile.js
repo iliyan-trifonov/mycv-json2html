@@ -1,11 +1,11 @@
 'use strict';
 
 var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var sourcemaps = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
 var plumber = require('gulp-plumber');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('default', ['build', 'watch']);
 
@@ -21,14 +21,15 @@ gulp.task('scripts', function () {
         'src/js/*.js'
     ], {base: 'src/'})
     .pipe(plumber())
-    .pipe(concat('bundle.js'))
-    .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(concat('bundle.js'))
+        .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('src/dist/js/'));
 });
 
 gulp.task('sass', function () {
+    //copy the required Bootstrap font to dist/
     gulp.src(
         'src/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2'
     )
