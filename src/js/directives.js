@@ -102,7 +102,11 @@
                 bindToController: {
                     data: '='
                 },
-                controller: function () {}
+                controller: function () {
+                    this.showDemoUrl = this.data.demoUrl &&
+                        this.data.demoUrl.url &&
+                        this.data.demoUrl.name;
+                }
             };
         }
     ])

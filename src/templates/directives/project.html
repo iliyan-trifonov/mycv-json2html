@@ -17,7 +17,7 @@
                 {{proj.data.sourceUrl.name}}
             </a>
         </div>
-        <div ng-if="proj.data.demoUrl && proj.data.demoUrl.url && proj.data.demoUrl.name">
+        <div ng-if="proj.showDemoUrl">
             <i class="glyphicon glyphicon-globe"></i>
             Demo:
             <a href="{{proj.data.demoUrl.url}}" target="_blank">
