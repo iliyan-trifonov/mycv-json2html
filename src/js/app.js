@@ -48,6 +48,11 @@
             $rootScope.cvTitle = config.data.cvTitle;
             $rootScope.cvDescription = config.data.cvDescription;
         });
+
+        //autoscroll on top on route change (better than ng-view's autoscroll)
+        $rootScope.$on("$routeChangeSuccess", function () {
+            window.scrollTo(0, 0);
+        });
     }])
 
     ;
