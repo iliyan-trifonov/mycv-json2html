@@ -92,7 +92,10 @@ Here's a sample JSON configuration to be put in src/js/config.json:
         "phone": "+11 111 111 111",  // or "phone": null
         "email": "me@host.com", // or "email": null
         "homepage": "https://iliyan-trifonov.com",
-        "otherurl": "http://blog.iliyan-trifonov.com",
+        "otherurls": [
+            "http://blog.iliyan-trifonov.com",
+            //...
+        ],
         "skype": "myskypename", // or "skype": null
         "twitter": "iliyan_trifonov",
         "github": "iliyan-trifonov",

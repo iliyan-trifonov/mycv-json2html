@@ -26,11 +26,11 @@
             <i class="glyphicon glyphicon-home"></i>
             <a ng-href="{{pi.data.homepage}}" target="_blank">{{pi.data.homepage}}</a>
         </div>
-        <div ng-if="pi.data.otherurl">
+        <div ng-if="pi.data.otherurls" ng-repeat="url in pi.data.otherurls track by $index">
             <i class="glyphicon glyphicon-globe"></i>
-            <a ng-href="{{pi.data.otherurl}}" target="_blank">{{pi.data.otherurl}}</a>
+            <a ng-href="{{url}}" target="_blank">{{url}}</a>
         </div>
-        <div class="row" ng-if="pi.data.homepage || pi.data.otherurl">&nbsp;</div>
+        <div class="row" ng-if="pi.data.homepage || pi.data.otherurls">&nbsp;</div>
         <div ng-if="pi.data.skype">
             <i class="glyphicon glyphicon-comment"></i>
             Skype:
