@@ -1,30 +1,30 @@
 <div class="row">
     <div class="col-md-4 text-right">
-        <h3>{{proj.data.name}}</h3>
+        <h3>{{::proj.data.name}}</h3>
         <div>
-            <a ng-href="{{proj.data.demoUrl.url || proj.data.sourceUrl.url}}" target="_blank">
-                <img ng-src="{{proj.data.thumb}}" />
+            <a ng-href="{{::(proj.data.demoUrl.url || proj.data.sourceUrl.url)}}" target="_blank">
+                <img ng-src="{{::proj.data.thumb}}" />
             </a>
         </div>
     </div>
 
     <div class="col-md-8">
-        <h3>{{proj.data.title}}</h3>
+        <h3>{{::proj.data.title}}</h3>
         <div>
             <i class="glyphicon glyphicon-globe"></i>
             Source:
-            <a href="{{proj.data.sourceUrl.url}}" target="_blank">
-                {{proj.data.sourceUrl.name}}
+            <a href="{{::proj.data.sourceUrl.url}}" target="_blank">
+                {{::proj.data.sourceUrl.name}}
             </a>
         </div>
-        <div ng-if="proj.showDemoUrl">
+        <div ng-if="::proj.showDemoUrl">
             <i class="glyphicon glyphicon-globe"></i>
             Demo:
-            <a href="{{proj.data.demoUrl.url}}" target="_blank">
-                {{proj.data.demoUrl.name}}
+            <a href="{{::proj.data.demoUrl.url}}" target="_blank">
+                {{::proj.data.demoUrl.name}}
             </a>
         </div>
-        <h4>Tech used: {{proj.data.tech_used}}</h4>
-        <div>{{proj.data.about}}</div>
+        <h4>Tech used: {{::proj.data.tech_used}}</h4>
+        <div>{{::proj.data.about}}</div>
     </div>
 </div>

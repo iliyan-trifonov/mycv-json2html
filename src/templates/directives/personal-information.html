@@ -4,52 +4,52 @@
             <i class="glyphicon glyphicon-user"></i>
             Personal Information
         </h3>
-        <img ng-src="{{pi.data.image}}" ng-if="pi.data.image" />
+        <img ng-src="{{::pi.data.image}}" ng-if="::pi.data.image" />
     </div>
     <div class="col-md-8">
-        <h1>{{pi.data.name}}</h1>
+        <h1>{{::pi.data.name}}</h1>
         <div>
             <i class="glyphicon glyphicon-map-marker"></i>
-            {{pi.data.address.value}}
+            {{::pi.data.address.value}}
         </div>
         <div>
             <i class="glyphicon glyphicon-phone"></i>
-            {{pi.data.phone.value}}
+            {{::pi.data.phone.value}}
         </div>
-        <div ng-if="pi.data.email">
+        <div ng-if="::pi.data.email">
             <i class="glyphicon glyphicon-envelope"></i>
-            <a ng-if="!pi.data.email.private" ng-href="mailto:{{pi.data.email.value}}">{{pi.data.email.value}}</a>
-            <span ng-if="pi.data.email.private">{{pi.data.email.value}}</span>
+            <a ng-if="::!pi.data.email.private" ng-href="mailto:{{::pi.data.email.value}}">{{::pi.data.email.value}}</a>
+            <span ng-if="::pi.data.email.private">{{::pi.data.email.value}}</span>
         </div>
         <div class="row">&nbsp;</div>
-        <div ng-if="pi.data.homepage">
+        <div ng-if="::pi.data.homepage">
             <i class="glyphicon glyphicon-home"></i>
-            <a ng-href="{{pi.data.homepage}}" target="_blank">{{pi.data.homepage}}</a>
+            <a ng-href="{{::pi.data.homepage}}" target="_blank">{{::pi.data.homepage}}</a>
         </div>
-        <div ng-if="pi.data.otherurls" ng-repeat="url in pi.data.otherurls track by $index">
+        <div ng-if="::pi.data.otherurls" ng-repeat="url in ::pi.data.otherurls">
             <i class="glyphicon glyphicon-globe"></i>
-            <a ng-href="{{url}}" target="_blank">{{url}}</a>
+            <a ng-href="{{::url}}" target="_blank">{{::url}}</a>
         </div>
-        <div class="row" ng-if="pi.data.homepage || pi.data.otherurls">&nbsp;</div>
-        <div ng-if="pi.data.skype">
+        <div class="row" ng-if="::(pi.data.homepage || pi.data.otherurls)">&nbsp;</div>
+        <div ng-if="::pi.data.skype">
             <i class="glyphicon glyphicon-comment"></i>
             Skype:
-            <a ng-if="!pi.data.skype.private" ng-href="skype:{{pi.data.skype.value}}?chat">{{pi.data.skype.value}}</a>
-            <span ng-if="pi.data.skype.private">{{pi.data.skype.value}}</span>
+            <a ng-if="::!pi.data.skype.private" ng-href="skype:{{::pi.data.skype.value}}?chat">{{::pi.data.skype.value}}</a>
+            <span ng-if="::pi.data.skype.private">{{::pi.data.skype.value}}</span>
         </div>
-        <div ng-if="pi.data.twitter">
+        <div ng-if="::pi.data.twitter">
             <i class="glyphicon glyphicon-comment"></i>
-            <a ng-href="https://twitter.com/{{pi.data.twitter}}" target="_blank">Twitter: {{pi.data.twitter}}</a>
+            <a ng-href="https://twitter.com/{{::pi.data.twitter}}" target="_blank">Twitter: {{::pi.data.twitter}}</a>
         </div>
-        <div ng-if="pi.data.github">
+        <div ng-if="::pi.data.github">
             <i class="glyphicon glyphicon-comment"></i>
-            <a ng-href="https://github.com/{{pi.data.github}}" target="_blank">Github: {{pi.data.github}}</a>
+            <a ng-href="https://github.com/{{::pi.data.github}}" target="_blank">Github: {{::pi.data.github}}</a>
         </div>
         <div class="row">&nbsp;</div>
         <div>
-            <span class="section-small">Sex:</span> {{pi.data.sex}} |
-            <span class="section-small">Date of birth:</span> {{pi.data.birthdate.value}} |
-            <span class="section-small">Nationality:</span> {{pi.data.nationality}}
+            <span class="section-small">Sex:</span> {{::pi.data.sex}} |
+            <span class="section-small">Date of birth:</span> {{::pi.data.birthdate.value}} |
+            <span class="section-small">Nationality:</span> {{::pi.data.nationality}}
         </div>
     </div>
 </div>

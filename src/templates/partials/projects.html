@@ -7,6 +7,6 @@
     </div>
 </div>
 
-<project ng-if="pp.projects" ng-repeat="project in pp.projects" data="project"></project>
+<project ng-if="::pp.projects" ng-repeat="project in ::pp.projects" data="::project"></project>
 
-<div ng-if="!pp.projects">No Projects defined</div>
+<div ng-if="::!pp.projects">No Projects defined</div>

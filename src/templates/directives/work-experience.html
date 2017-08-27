@@ -1,4 +1,4 @@
-<div class="row" ng-if="we.data.length > 0">
+<div class="row" ng-if="::(we.data.length > 0)">
     <div class="col-md-4 text-right">
         <h3 class="text-uppercase section-title">
             <i class="glyphicon glyphicon-briefcase"></i>
@@ -7,13 +7,13 @@
     </div>
 </div>
 
-<div class="row" ng-repeat="exp in we.data">
+<div class="row" ng-repeat="exp in ::we.data">
     <div class="col-md-4 text-right">
-        <h3>{{exp.date_start}} - {{exp.date_end}}</h3>
+        <h3>{{::exp.date_start}} - {{::exp.date_end}}</h3>
     </div>
     <div class="col-md-8">
-        <h3>{{exp.company_name}}</h3>
-        <h4>{{exp.position}}</h4>
-        <div>{{exp.about}}</div>
+        <h3>{{::exp.company_name}}</h3>
+        <h4>{{::exp.position}}</h4>
+        <div>{{::exp.about}}</div>
     </div>
 </div>
